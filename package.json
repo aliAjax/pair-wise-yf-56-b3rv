@@ -6,7 +6,8 @@
     "dev": "next dev -p 62021",
     "build": "next build",
     "start": "next start -p 62021",
-    "preview": "next start -p 62021"
+    "preview": "next start -p 62021",
+    "test": "tsc lib/isolation.ts lib/executor.ts lib/store.ts --outDir .tests/build --module commonjs --target ES2020 --moduleResolution node --esModuleInterop --skipLibCheck --types node && node --test .tests/*.test.cjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
