@@ -6,5 +6,5 @@ import { messages } from '@/lib/messages';
 
 export function Providers({ children }: { children: ReactNode }) {
   const [client] = useState(() => new QueryClient());
-  return <NextIntlClientProvider locale="zh" messages={messages}><QueryClientProvider client={client}>{children}</QueryClientProvider></NextIntlClientProvider>;
+  return <NextIntlClientProvider locale="zh" timeZone="Asia/Shanghai" messages={messages}><QueryClientProvider client={client}>{children}</QueryClientProvider></NextIntlClientProvider>;
 }
